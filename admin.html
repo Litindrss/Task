@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Admin</title>
+
+	<script
+	src="https://code.jquery.com/jquery-2.2.4.js"
+	integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+	crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<!--TOP -->
+	<div class="container-fluid top">
+	<!--HEADER-->
+		<div class="row">
+			<div class="login">
+				<button type="button" class="logout btn btn-primary" data-toggle="modal" data-target="#exampleModal">Выйти</button>
+
+				<button type="button" class="login btn btn-primary new_task" data-toggle="modal" data-target="#new_task_Modal">Новая задача</button>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="sort_by">
+			<div class="row">
+				<span class="sort_header">Отсортировать по:</span>
+				<div class="sort_item by_username">Имя пользователя</div>
+				<div class="sort_item by_email">Email</div>
+				<div class="sort_item by_status">Статус</div>
+			</div>
+			<div class="desc">
+				<span>Возрастанию/Убыванию</span>
+				<input id="by_p" value="1" type="checkbox" checked>
+			</div>
+		</div>
+
+		<div class="content">
+		</div>
+		<div class="row pages">
+		</div>
+		
+	</div>
+
+
+
+
+
+
+
+	<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		        	<form class="login-form form">
+		        		<div class="valid"></div>
+		        		<input type="text" id="username" placeholder="Логин">
+		        		<input type="text" id="password" placeholder="Пароль">
+		        	</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" id="log" class="btn btn-primary">Войти</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="new_task_Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+					<form class="Login-form">
+
+						<input type="text" id="new_task_username" name="username" class="form-control" placeholder="username" required>
+
+						<input type="text" id="new_task_email" name="e-mail" class="form-control" placeholder="e-mail" required>
+
+						<input type="text" id="new_task_text" name="text" class="form-control" placeholder="text" required>
+
+					</form>
+					
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button  class="btn btn-primary new_task_submit" data-dismiss="modal">Отправить</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--SCRIPTS-->
+	<!--Bootstrap JS-->
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+		<script type="text/javascript" src="main.js"></script>
+
+
+		<script>
+			
+		
+		</script>
+</body>
+</html>
